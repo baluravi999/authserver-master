@@ -70,7 +70,7 @@ const token_middleware = (req,res,next)=>{
 
 
 //create the get request (ac's)
-app.get("/category/:key",[token_middleware],(req,res)=>{
+app.get("/category/:key"[token_middleware],(req,res)=>{
     let key = req.params.key;
     ashokIT.connect("mongodb+srv://admin:admin@miniprojectdb.nzphu.mongodb.net/ecommerce?retryWrites=true&w=majority",(err,connection)=>{
         if(err) throw err;
